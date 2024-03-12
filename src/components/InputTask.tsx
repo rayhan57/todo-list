@@ -1,4 +1,5 @@
 import React from "react";
+import { MdAddTask } from "react-icons/md";
 
 interface InputTaskProps {
   value: string;
@@ -26,8 +27,8 @@ const InputTask: React.FC<InputTaskProps> = ({
           value={value}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button className="rounded-md bg-gradient-to-tl from-blue-500 to-blue-400 p-1 text-sm text-white hover:bg-gradient-to-br">
-          Add
+        <button className="flex items-center gap-1 rounded-md bg-gradient-to-tl from-blue-500 to-blue-400 p-1 text-sm text-white hover:bg-gradient-to-br active:scale-95">
+          <MdAddTask size={18} /> Add
         </button>
       </form>
     </div>

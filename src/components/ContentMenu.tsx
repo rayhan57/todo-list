@@ -85,6 +85,7 @@ const ContentMenu: React.FC<ContentMenuProps> = ({
   };
 
   const handleDelete = (id: string) => {
+    if (!confirm("Are you sure you want to delete this task?")) return;
     deleteTask(id);
     setTask(tasks.filter((task) => task.id !== id));
     setVisibleMoreMenu(null);
